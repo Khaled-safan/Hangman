@@ -1,0 +1,280 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px;
+
+}
+
+.container .head{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+
+}
+.container .head h3{
+  text-transform: capitalize;
+}
+.container .head h3 span{
+    color: rgb(4, 7, 235);
+}
+.container .game{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+    width: 100%;
+    height: 309px;
+}
+.container .containerGame{
+    border-bottom: 1px solid black;
+
+}
+.container .game .draw{
+    background-color: #ededed;
+    width: 300px;
+    height: 100%;
+    position: relative;
+}
+.container .game .draw.wrong-1 .stand{
+    display: block;
+}
+.container .game .draw.wrong-2 .div{
+    display: block;
+}
+.container .game .draw.wrong-3 .hang{
+    display: block;
+}
+.container .game .draw.wrong-4 .robe{
+    display: block;
+}
+.container .game .draw.wrong-5 .man .head{
+    display: block;
+}
+.container .game .draw.wrong-6 .man .body{
+    display: block;
+}
+.container .game .draw.wrong-7 .man .hands{
+    display: block;
+}
+.container .game .draw.wrong-8 .man .legs{
+    display: block;
+}
+.container .game .draw .stand{
+    width: 75px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    bottom: 3px;
+    left: 40px;
+    display: none;
+}
+.container .game .draw  .div{
+    position: absolute;
+    height: 156px;
+    width: 3px;
+    background-color: black;
+    bottom: 5px;
+    left: 74px;
+    display: none;
+}
+.container .game .draw .hang{
+    width: 80px;
+    height: 3px;
+    background-color: black;
+    top: 46%;
+    position: absolute;
+    left: 23%;
+    display: none;
+}
+.container .game .draw .hang::after{
+    content: "";
+    position: absolute;
+    left: 96%;
+    top: 50%;
+    background-color: black;
+    height: 30px;
+    width: 3px;
+   
+}
+ .container .game .draw .robe{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: 3px dotted black;
+    top: 57%;
+    left: 42%;
+    border-radius: 50%;
+    display: none; 
+}
+
+
+.container .game .draw .man .head{
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    position: absolute;
+    top: 59%;
+    left: 44%;
+    border: 3px solid black;
+    display: none;
+} 
+.container .game .draw .man .body{
+    position: absolute;
+    height: 57px;
+    width: 3px;
+    background-color: black;
+    top: 68%;
+    left: 48%;
+    display: none;
+} 
+.container .game .draw .man .hands{
+    display: none;
+}
+.container .game .draw .man .hands::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 35px;
+    height: 3px;
+    top: 77%;
+    right: 41%;
+    transform: rotate(-39deg);
+
+
+} 
+.container .game .draw .man .hands::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 35px;
+    height: 3px;
+    top: 77%;
+    left: 38%;
+    transform: rotate(39deg);
+} 
+
+.container .game .draw .man .legs{
+    display: none;
+}
+.container .game .draw .man .legs:before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 32px;
+    height: 3px;
+    top: 92%;
+    right: 42%;
+    transform: rotate(39deg);
+}
+
+.container .game .draw .man .legs::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 32px;
+    height: 3px;
+    top: 92%;
+    right: 50%;
+    transform: rotate(-39deg);
+} 
+
+.game .letters{
+    display: flex;
+    flex-wrap: wrap;
+    width: 39%;
+    justify-content: center;
+    align-content: center;
+}
+.game .letters.fail{
+    pointer-events: none;
+}
+.game .letters .letter{
+    padding: 6px;
+    display: inline-block;
+    background-color: #0faff2;
+    margin: 4px;
+    width: 27px;
+    height: fit-content;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.game .letters .letter.click{
+    opacity: 0.3;
+    pointer-events: none;
+}
+.container .inputbuttons{
+    padding: 6px;
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+
+
+}
+.container  .input{
+    width: 45px;
+    background-color: white;
+    height: 39px;
+    display: inline-block;
+    border-bottom: 2px solid black;
+    margin: auto 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+
+body .popp{
+    background-color: red;
+    font-size: 22px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    width: 257px;
+    height: 81px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+body .popp span{
+    color: black;
+}
+body .Popp-Succes{
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #0faff2;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+    text-transform: capitalize;
+    width: 257px;
+    height: 81px;
+    letter-spacing: 1px;
+}
